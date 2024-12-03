@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Creepster", system-ui;
+    overflow-x: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+header > h1 {
+    color: #a51f1f;
+    font-size: 4em;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px #000, 0 0 5px #a51f1f;
+}
+
+h1:hover {
+    transition: .5s;
+    transform: scale(1.05);
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 50%;
+    margin: auto;
+}
+
+div {
+    margin: 20px;
+}
+
+.profesor {
+    width: 145px;
+    height: auto;
+    padding: 10px;
+    border: 2px solid transparent;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8),
+                0 0 10px rgba(0, 0, 0, 0.8);
+    background-color: #1c0d1a;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.profesor:hover {
+    transform: scale(1.05);
+    border-color: #618B25;
+    box-shadow: inset 0 0 20px rgba(97, 139, 37, 0.8), 
+                0 0 15px rgba(97, 139, 37, 0.6);
+}
+
+p {
+    text-align: center;
+    background: rgba(55, 6, 23, 0.4);
+    padding: 9px;
+    border: 1px solid #EE6055;
+    color: #EE6055;
+}
+
+.back {
+    position: relative;
+    top: 40px;
+    left: 20px;
+    font-size: 20px;
+    background: rgba(157, 78, 221, 0.3);
+    text-decoration: none;
+    color: #c77dff;
+    border: 1px solid #c77dff;
+    padding: 10px;
+    position: relative;
+}
+
+.back:hover {
+    transition: 0.5s;
+    box-shadow: 0 0 20px #9d4edd;
+    box-shadow: 0 0 80px #9d4edd;
+    box-shadow: 0 0 110px #9d4edd;
+}
+
+@media (max-width: 1024px) {
+    header > h1 {
+        font-size: 3em;
+    }
+
+    section {
+        width: 80%;
+    }
+
+    .profesor {
+        width: 130px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    header > h1 {
+        font-size: 2.5em;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    .profesor {
+        width: 120px;
+        padding: 8px;
+    }
+
+    p {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    .back {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header > h1 {
+        font-size: 2em;
+    }
+
+    section {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .profesor {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .back {
+        width: 100%;
+        text-align: center;
+    }
+}

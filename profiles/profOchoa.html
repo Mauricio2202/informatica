@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Perfil Miguel Ochoa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Rye&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Rye&family=Special+Elite&display=swap');
+        </style>
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../module-teachers/img/wallpaperNavidad.png");
+    background-size: cover;
+    font-family: "Rye", serif;
+    overflow: auto; /* Cambiado a auto para permitir desplazamiento si es necesario */
+    position: relative;
+}
+
+.glitch {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; 
+    background: repeating-linear-gradient(
+        to top,
+        rgba(255, 0, 0, 0.2),
+        rgba(0, 255, 0, 0.2) 10%,
+        rgba(0, 0, 255, 0.2) 20%
+    );
+    background-size: 100% 30px;
+    opacity: 0.4; 
+    animation: moveUp 0.5s linear infinite, flicker 2s ease-in-out infinite;
+}
+
+@keyframes moveUp {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-100%); }
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 0.2; }
+    20%, 24%, 55% { opacity: 0.6; }
+}
+
+.profesor {
+    margin: 20px;
+    width: 180px;
+    height: auto;
+    padding: 10px;
+    border: 2px solid transparent;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8), 
+                0 0 10px rgba(0, 0, 0, 0.8);
+    background-color: #1c0d1a;
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.profesor:hover {
+    transform: scale(1.05);
+    border-color: #618B25;
+    box-shadow: inset 0 0 20px rgba(205, 93, 103, 0.8), 
+                0 0 15px rgba(205, 93, 103, 0.6);
+}
+
+.imagen {
+    background: none;
+    color: none;
+    border: none;
+}
+
+a {
+    background: rgba(173, 232, 244, 0.3);
+    text-decoration: none;
+    color: #00b4d8;
+    border: 1px solid #00b4d8;
+    padding: 10px;
+    position: relative;
+}
+
+.back {
+    position: relative;
+    top: -100px;
+    left: -20px;
+}
+
+.back:hover {
+    transition: 0.4s;
+    background: rgba(173, 232, 244, 0.3);
+    box-shadow: 0 0 20px #00b4d8, 0 0 80px #00b4d8, 0 0 110px #00b4d8;
+}
+
+.container_profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.description {
+    background: rgba(68, 64, 84, 0.5);
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 960px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: "Creepster", system-ui;
+    color: #f46036;
+    text-shadow: 0 0 5px #f46036;
+    font-size: 3em;
+    letter-spacing: 3px;
+}
+
+p {
+    font-family: "Special Elite", system-ui;
+    color: #FFF;
+    font-size: 23px;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+video {
+    width: 100%;
+    max-width: 670px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #e0aaff, 0 0 50px #e0aaff, 0 0 80px #e0aaff;
+    max-height: 400px; /* Limitar la altura máxima para evitar que el video se desborde */
+    margin: 20px 0;
+    object-fit: cover; /* Asegura que el video se recorte correctamente si es necesario */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container_profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profesor {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .back {
+        top: 0;
+        left: 0;
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+    video {
+        max-height: 300px; /* Limitar la altura del video en pantallas pequeñas */
+    }
+    </style>
+</head>
+<body>
+    <div class="glitch"></div>
+
+    <audio autoplay loop>
+        <source src="../module-teachers/media/suspenseMusic.mp4" type="audio/mpeg">
+    </audio>
+
+    <div class="container_profile">
+            <img src="../module-teachers/img/lemus.JPEG" alt="ochoa" class="profesor">
+
+        <section class="description">
+            <h1>Miguel Ochoa</h1>
+            <h2><i>Frase característica: Así es cuando es.</i></h2>
+            <p>
+                Un profesor muy bueno en el campo de redes y web, es de aprovechar sus conocimientos, su exigencia logra que como alumno obtengas habilidades blandas y habilidades técnicas muy buenas para redes y programación web.
+            </p>
+        </section>
+
+        <div class="backContainer">
+            <a href="../module-teachers/index.html" class="back">Regresar</a>
+        </div>
+    </div>
+    <article>
+        <video src="./img/entrevista-ochoa.MP4" controls></video>
+    </article>
+
+</body>
+</html>
