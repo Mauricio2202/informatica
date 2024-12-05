@@ -213,9 +213,26 @@ footer .iniciative:hover, footer .groups:hover {
     border-radius: 8px;
 }
 
+.reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resetButton {
+    cursor: pointer;
+    padding: 9px;
+    background: transparent;
+    color: #FFF;
+    font-size: 14px;
+    border: 1px solid #DDD;
+    margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
     #menuIcon {
         display: block;
+        cursor: pointer;
     }
 
     #navList {
