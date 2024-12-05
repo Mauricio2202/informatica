@@ -171,7 +171,10 @@ p {
     }
 
     .back {
+        position: relative;
+        top: 10px;
         width: 100%;
         text-align: center;
+        margin-bottom: 30px;
     }
 }
