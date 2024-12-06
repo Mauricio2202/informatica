@@ -229,6 +229,11 @@ footer .iniciative:hover, footer .groups:hover {
     margin-bottom: 20px;
 }
 
+.mascota {
+    width: 400px;
+    border-radius: 50%;
+}
+
 @media (max-width: 768px) {
     #menuIcon {
         display: block;
