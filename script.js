@@ -17,15 +17,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    let visitas = sessionStorage.getItem('contador_de_visitas');
-
-    if (!visitas) {
-        visitas = 0;
+    function actualizarContador() {
+        const visitas = localStorage.getItem('contador_de_visitas');
+        document.querySelector('.contador_de_visitas').innerText = 
+            `Este sitio ha sido visitado ${visitas} veces.`;
     }
 
-    visitas = parseInt(visitas) + 1;
+    if (!sessionStorage.getItem('visita_registrada')) {
+        let visitas = localStorage.getItem('contador_de_visitas');
+        
+        if (!visitas) {
+            visitas = 0;
+        }
+        
+        visitas = parseInt(visitas) + 1;
+        localStorage.setItem('contador_de_visitas', visitas);
+        
+        sessionStorage.setItem('visita_registrada', 'true');
+        
+        actualizarContador();
+    } else {
+        actualizarContador();
+    }
 
-    sessionStorage.setItem('contador_de_visitas', visitas);
-
-    document.querySelector('.contador_de_visitas').innerText = `Este sitio ha sido visitado ${visitas} veces en esta sesión.`;
+    document.getElementById('resetButton').addEventListener('click', () => {
+        localStorage.setItem('contador_de_visitas', 0);
+        sessionStorage.removeItem('visita_registrada');
+        actualizarContador();
+    });
 });
