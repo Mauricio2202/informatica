@@ -238,7 +238,7 @@ footer .iniciative:hover, footer .groups:hover {
 
 .mascota {
     width: 400px;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 
 @media (max-width: 768px) {
