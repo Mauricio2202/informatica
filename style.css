@@ -291,10 +291,24 @@ footer .iniciative:hover, footer .groups:hover {
         gap: 10px;
         padding: 10px;
     }
+
+    .capturesMoments {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 769px) {
     #menuIcon {
         display: none;
+    }
+
+    .capturesMoments {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 }
