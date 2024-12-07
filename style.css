@@ -95,7 +95,7 @@ nav > ul {
 
 a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: #ddd;
 }
 
@@ -164,15 +164,26 @@ img {
 
 #semanaInfo {
     width: 100%;
-    font-size: 18px;
+    font-size: 23px;
     color: #FFF;
-    background-color: #1a1a1a;
+    background:rgba(26, 26, 26, 0.8);
     padding: 15px;
-    border: 2px solid #faa307;
     text-align: center;
     box-sizing: border-box;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+}
+
+.capturesMoments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotoGrupal {
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
 }
 
 footer {
@@ -238,6 +249,7 @@ footer .iniciative:hover, footer .groups:hover {
 
 .mascota {
     width: 400px;
+    border-radius: 20%;
 }
 
 @media (max-width: 768px) {
