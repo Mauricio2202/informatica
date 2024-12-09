@@ -46,3 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarContador();
     });
 });
+
+// Función para abrir el modal
+function openModal(imageElement) {
+    var modal = document.getElementById("imageModal");
+    var modalImage = document.getElementById("modalImage");
+    modal.style.display = "flex"; // Muestra el modal
+    modalImage.src = imageElement.src; 
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    var modal = document.getElementById("imageModal");
+    modal.style.display = "none"; // Oculta el modal
+}
