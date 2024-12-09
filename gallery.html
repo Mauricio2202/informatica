@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gallery.css">
     <link rel="icon" href="./icon.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
-    </style>
 </head>
 <body>
     <video autoplay loop muted playsinline class="video-background">
@@ -16,5 +13,44 @@
         Tu navegador no soporta la reproducción de videos.
     </video>
     <h1>Semanas de Informática Anteriores</h1>
+    <main class="gallery">
+        <img src="img1-galeria.jpg" alt="galeria1">
+        <img src="img2-galeria.jpg" alt="galeria2">
+        <img src="img3-galeria.jpg" alt="galeria3">
+        <img src="img4-galeria.jpg" alt="galeria4">
+        <img src="img5-galeria.jpg" alt="galeria5">
+        <img src="img6-galeria.jpg" alt="galeria6">
+    </main>
+
+    <!-- Modal para imágenes -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="Imagen ampliada">
+    </div>
+
+    <script>
+const images = document.querySelectorAll('.gallery img');
+const modal = document.getElementById('imageModal');
+const modalImage = document.getElementById('modalImage');
+const closeModal = document.getElementById('closeModal');
+
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        modalImage.src = image.src;
+        modal.classList.add('active');
+    });
+});
+
+closeModal.addEventListener('click', () => {
+    modal.classList.remove('active');
+});
+
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.classList.remove('active');
+    }
+});
+
+    </script>
 </body>
 </html>
