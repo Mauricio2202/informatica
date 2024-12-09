@@ -129,11 +129,14 @@
         </div>
     </section>
     <aside class="capturesMoments">
-        <img src="./grupo-zamora.png" alt="grupo-zamora" class="fotoGrupal">
-        <img src="./grupo-ochoa.jpg" alt="grupo-ochoa" class="fotoGrupal">
-        <img src="./grupo-lemus.jpg" alt="grupo-lemus" class="fotoGrupal">
-        <img src="./grupo-jassel.jpg" alt="grupo-jasel" class="fotoGrupal">
+        <img src="./grupo-zamora.png" alt="grupo-zamora" class="fotoGrupal" onclick="openModal(this)">
+        <img src="./grupo-ochoa.jpg" alt="grupo-ochoa" class="fotoGrupal" onclick="openModal(this)">
+        <img src="./grupo-lemus.jpg" alt="grupo-lemus" class="fotoGrupal" onclick="openModal(this)">
+        <img src="./grupo-jassel.jpg" alt="grupo-jasel" class="fotoGrupal" onclick="openModal(this)">
     </aside>
+    <div id="imageModal" class="image-modal" onclick="closeModal()">
+        <img id="modalImage" class="modal-content">
+    </div>
     <br><br><br><br><br><br><br>
     <span class="contador_de_visitas"></span>
     <div class="reset">
